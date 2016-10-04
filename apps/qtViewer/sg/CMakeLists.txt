@@ -14,9 +14,9 @@
 ## limitations under the License.                                           ##
 ## ======================================================================== ##
 
-INCLUDE_DIRECTORIES(${CMAKE_CURRENT_SOURCE_DIR})
+INCLUDE_DIRECTORIES(${CMAKE_CURRENT_SOURCE_DIR} ${MOAB_INCLUDE_DIRS})
 
-ADD_LIBRARY(ospray_sg STATIC
+ADD_LIBRARY(ospray_sg SHARED
   # scene graph nodes
   SceneGraph.cpp
   Renderer.cpp
@@ -45,9 +45,13 @@ ADD_LIBRARY(ospray_sg STATIC
   importer/ImportOBJ.cpp
   importer/ImportPLY.cpp
   importer/ImportRIVL.cpp
+  importer/ImportMOAB.cpp
 )
 
+LINK_DIRECTORIES(${MOAB_LIBRARY_DIRS})
+
 TARGET_LINK_LIBRARIES(ospray_sg
+  ${MOAB_LIBRARIES}
   ospray
   ospray_common
   ospray_xml

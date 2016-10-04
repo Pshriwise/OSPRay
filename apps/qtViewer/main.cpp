@@ -186,6 +186,8 @@ namespace ospray {
           } else if (fn.ext() == "xml") {
             std::cout << "#osp:qtv: reading RIVL file " << arg << std::endl;
             world = sg::importRIVL(arg);
+	  } else if (fn.ext() == "h5m") {
+	    sg::importMOAB(world,fn);
           } else 
             sg::importFile(world,fn);
             

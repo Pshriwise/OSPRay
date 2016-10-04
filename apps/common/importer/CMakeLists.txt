@@ -18,6 +18,7 @@ OSPRAY_CREATE_LIBRARY(ospray_importer
   importOSP.cpp
   importRAW.cpp
   importRM.cpp
+  importMOAB.cpp
   Importer.cpp
   TinyXML2.cpp
 LINK

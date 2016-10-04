@@ -151,13 +151,16 @@ namespace ospray {
     World *readXML(const std::string &fileName);
     World *importRIVL(const std::string &fileName);
     World *importSpheres(const std::string &fileName);
-
+    
     /*! import an OBJ wavefront model, and add its contents to the given world */
     void importOBJ(const Ref<World> &world, const FileName &fileName);
 
     /*! import an PLY model, and add its contents to the given world */
     void importPLY(Ref<World> &world, const FileName &fileName);
 
+    /*! import a MOAB model, and add its contents to the given world */
+    void importMOAB(Ref<World> &world, const FileName &fileName);
+    
     /*! import an X3D-format model, and add its contents to the given world */
     void importX3D(const Ref<World> &world, const FileName &fileName);
 

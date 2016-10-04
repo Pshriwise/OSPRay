@@ -16,6 +16,8 @@
 
 CONFIGURE_OSPRAY()
 
+SET(MOAB_LIBRARIES /home/shriwise/dagmc_blds/moabs/lib/)
+
 OSPRAY_CREATE_LIBRARY(ospray_loaders
   ObjectFile.cpp
   OSPObjectFile.cpp
@@ -26,6 +28,7 @@ OSPRAY_CREATE_LIBRARY(ospray_loaders
   TinyXML2.cpp
   TriangleMeshFile.cpp
   VolumeFile.cpp
+  MOABMesh.cpp
 LINK
-  ${OSPRAY_LIBRARIES}
+  ${OSPRAY_LIBRARIES} ${MOAB_LIBRARIES}
 )
