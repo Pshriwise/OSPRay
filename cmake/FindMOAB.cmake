@@ -10,7 +10,7 @@
 find_path(MOAB_CMAKE_CONFIG NAMES MOABConfig.cmake
           HINTS ${MOAB_ROOT}
           PATHS ENV LD_LIBRARY_PATH
-          PATH_SUFFIXES lib cmake/MOAB/ Lib
+          PATH_SUFFIXES lib Lib
           NO_DEFAULT_PATH)
 
 message(STATUS "Found MOAB in ${MOAB_CMAKE_CONFIG}")
