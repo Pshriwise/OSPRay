@@ -16,7 +16,7 @@
 
 INCLUDE_DIRECTORIES(${CMAKE_CURRENT_SOURCE_DIR} ${MOAB_INCLUDE_DIRS})
 
-ADD_LIBRARY(ospray_sg SHARED
+ADD_LIBRARY(ospray_sg STATIC
   # scene graph nodes
   SceneGraph.cpp
   Renderer.cpp
